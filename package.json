@@ -1,0 +1,42 @@
+{
+  "name": "equipo1actividad4",
+  "version": "1.0.0",
+  "description": "actividad 4",
+  "homepage": "https://github.com/CikiUmi/equipo1actividad4#readme",
+  "bugs": {
+    "url": "https://github.com/CikiUmi/equipo1actividad4/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CikiUmi/equipo1actividad4.git"
+  },
+  "license": "ISC",
+  "author": "equipo1",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node src/server.js",
+    "dev": "cross-env NODE_ENV=development nodemon src/server.js",
+    "test": "cross-env NODE_ENV=test jest --runInBand --detectOpenHandles"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.4",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.2.1",
+    "node.js": "^0.0.1-security",
+    "nodemon": "^3.1.11"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0",
+    "jest": "^30.2.0",
+    "mongodb-memory-server": "^11.0.1",
+    "supertest": "^7.2.2",
+    "tslib": "^2.8.1"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}

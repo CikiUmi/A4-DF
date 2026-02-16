@@ -1,0 +1,296 @@
+/* CSS y eso */
+
+/* Estilos para todos los elementos con ID */
+
+#login-dialog, #register-dialog {
+  position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#entrarBoton{
+  background-color: var(--blanco);
+  color: var(--bg);
+  font-weight: 700;
+}
+
+#entrarBoton:active{
+  background-color: var(--primary);
+  color: var(--accent);
+}
+
+#crearCuentaBoton{
+    background-color: var(--blanco);
+    color: var(--bg);
+      font-weight: 700;
+}
+
+#crearCuentaBoton:active{
+  background-color: var(--primary);
+  color: var(--accent);
+
+}
+
+/* Variables */
+:root {
+  --bg: #f7f6ec;
+  --bg-transparentoso: rgb(72, 53, 6,0.5);
+  --blanco: #d9ba6d;
+  --color-text-main: #f7f6ec;
+  --muted: #6b7580;
+  --mid: #282A2C;
+  --primary: #483506;
+  --primary-inputs:rgb(107, 85, 30);
+  --primary: #483506;
+  --accent: #d9ba6d;
+  --accent-inputs: #e4d9bd;
+  --radius-small: 5px;
+  --radius-small: 5px;
+  --radius-big: 15px;
+  --shadow: 0 6px 18px rgba(22, 166, 239, 0.06);
+  --gap: 16px;
+  --max-width: 1100px;
+  --container-padding: 20px;
+}
+
+/* Estilos aplicables a todas las páginas */
+
+/* = Elementos existentes*/
+* {
+  font-family: 'sanchez', 'serif';
+  background-color: transparent;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--color-text-main);
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bg);
+
+}
+
+footer {
+  background-color: var(--accent);
+  background: linear-gradient(20deg, var(--bg), var(--accent));
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Miniver', 'cursive';
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.4s;
+  font-weight: 300;
+}
+
+a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+  cursor: pointer;
+
+}
+
+dialog {
+  border-radius: var(--radius-big);
+  border: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  background-color: transparent;
+  transition: all 0.3s ease;
+
+}
+
+dialog::backdrop {
+  background-color: rgb(15, 17, 17, 0.6);
+  box-shadow: 0px 2px 8px var(--shadow);
+  box-shadow: var(--bg-transparentoso);
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(3px);
+  transition: 0.3s ease;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: all 0.2s;
+
+}
+
+button:hover {
+  box-shadow: 0px 2px 8px var(--bg-transparentoso);
+
+}
+
+input {
+  cursor: pointer;
+}
+
+
+.material-icons {
+  /* De google */
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 30px;
+  /* Preferred icon size */
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  -webkit-font-smoothing: antialiased;
+  /* Support for all WebKit browsers. */
+  text-rendering: optimizeLegibility;
+  /* Support for Safari and Chrome. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for Firefox. */
+  font-feature-settings: 'liga';
+  /* Support for IE. */
+}
+/* LOGIN Y REGISTRO */
+.log-button-a {
+  background-color: none;
+  border: none;
+  color: var(--primary-inputs);
+  text-decoration: underline;
+}
+
+.tarjetaLogReg {
+  width: min(40vw, 500px);
+  max-width: 70vb;
+  padding: clamp(20px, 5vw, 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--bg);
+  color: var(--blanco);
+}
+
+.input-logReg {
+  display: flex;
+  flex-direction: row;
+  margin: var(--container-padding) 0px;
+}
+
+.input-logReg i {
+  padding-left: 15px;
+  color: var(--primary);
+}
+
+.input-logReg input {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--muted);
+  color: var(--primary-inputs);
+  transition: all 0.2s;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.input-logReg input:hover {
+  border-bottom: 2px solid var(--accent);
+}
+
+.input-logReg input:focus {
+  border-bottom: 2px solid var(--accent-inputs);
+}
+
+.errorTextCuenta {
+  color: var(--accent);
+  text-align: left;
+  font-style: italic;
+  display: none;
+  padding: 0;
+}
+
+.tarjetaLogReg .wrapper-button {
+  align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  gap: 15px;
+  margin-top: 60px;
+
+}
+
+.log-button {
+  width: 100%;
+  padding: 7px;
+  border: none;
+  background-color: var(--bg);
+  border-radius: var(--radius-small);
+  font-size: 1rem;
+  color: var(--blanco);
+}
+
+.muted-button:active {
+  background-color: var(--accent-inputs);
+  border: solid 1px var(--accent-inputs);
+  color: var(--primary-inputs);
+}
+
+.muted-button {
+border: solid 1px var(--blanco);
+}
+
+.log-button-a {
+  text-decoration: none;
+  transition: all 0.2s;
+  margin-top: 20px;
+  font-size: 1rem;
+  text-decoration: underline;
+}
+
+.log-button-a:hover {
+  color: var(--blanco-);
+  box-shadow: none;
+
+}
+
+.log-button:hover {
+  box-shadow: 0px 8px 14px var(--bg-transparentoso);
+}
+
+.tarjetaLogReg h2 {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  margin-bottom: 1rem;
+}
+
+
+@media (max-width: 480px) {
+  .tarjetaLogReg {
+    padding: 20px;
+  }
+
+  .wrapper-button {
+    flex-direction: column;
+    /* botones uno abajo del otro */
+  }
+
+  .log-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {}

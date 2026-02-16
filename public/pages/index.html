@@ -1,0 +1,124 @@
+<!-- Página principal -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Miniver&family=Sanchez:ital@0;1&display=swap"
+    rel="stylesheet">
+
+  <!-- Compatibilidad y otros -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Íconos -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/028972a11e.js" crossorigin="anonymous"></script>
+
+  <!-- Hoja(s) de estilos :DD -->
+  <link rel="stylesheet" href="../styles/styles.css">
+
+  <!-- Script -->
+  <script src="../app/app.js" defer></script>
+  <script src="../app/register.js" defer></script>
+  <script src="../app/login.js" defer></script>
+  <script src="../app/loginCard.js" defer></script>
+
+  <!-- Información de la página -->
+  <link rel="icon" href="../resources/iconfinder-coffee11-3535181_113880.ico" />
+  <title>Cafetería</title>
+</head>
+
+<body>
+
+
+  <div id="login-dialog">
+    <div class="areaDelLogin tarjetaLogReg">
+      <form>
+        <h2>Iniciar sesión</h2>
+
+        <div>
+          <div class="input-logReg">
+            <input type="email" placeholder="Correo" id="loginCorreoInput" autocomplete="off">
+            <i class="material-icons">mail</i>
+          </div>
+          <p class="errorTextCuenta" id="loginCorreoError">* La cuenta no existe</p>
+        </div>
+
+
+        <div>
+          <div class="input-logReg">
+            <input type="password" placeholder="Contraseña" id="loginContrasenaInput" autocomplete="off">
+            <i class="material-icons">lock</i>
+          </div>
+          <p class="errorTextCuenta" id="loginContrasenaError">* Contraseña errónea</p>
+
+        </div>
+
+
+        <div class="wrapper-button">
+          <button class="log-button muted-button" type="button" id="cancelarLogin">Cancelar</button>
+
+          <button class="log-button blanco-button" type="button" id="entrarBoton" onclick=login()>Entrar</button>
+        </div>
+
+        <button class="log-button-a" type="button" onclick=intercambioElementos()>Aún no tengo una cuenta</button>
+
+      </form>
+    </div>
+  </div>
+
+  <div id="register-dialog">
+    <div class="areaDelRegistro tarjetaLogReg">
+      <form>
+        <h2>Registrarse</h2>
+
+        <div>
+          <div class="input-logReg">
+            <input type="text" placeholder="Nombre de Usuario" id="registroUserInput" autocomplete="off">
+            <i class="material-icons">person</i>
+          </div>
+          <p class="errorTextCuenta" id="registroUsuarioError">* Se requiere un nombre de usuario</p>
+        </div>
+
+        <div>
+          <div class="input-logReg">
+            <input type="email" placeholder="Correo" id="registroCorreoInput" autocomplete="off">
+            <i class="material-icons">mail</i>
+          </div>
+          <p class="errorTextCuenta" id="registroCorreoErrorRepetido">* Este correo ya está en uso</p>
+          <p class="errorTextCuenta" id="registroCorreoError">* Se requiere un correo</p>
+        </div>
+        <div>
+          <div class="input-logReg">
+            <input type="password" placeholder="Contraseña" id="registroContrasenaInput" autocomplete="off">
+
+            <i class="material-icons">lock</i>
+          </div>
+          <p class="errorTextCuenta" id="registroContrasenaError">* Se requiere una contraseña</p>
+          <p class="errorTextCuenta" id="registroContrasenaErrorMayuscula">* Utiliza al menos una Mayúscula</p>
+          <p class="errorTextCuenta" id="registroContrasenaErrorMinuscula">* Utiliza al menos una Minúscula</p>
+          <p class="errorTextCuenta" id="registroContrasenaErrorNumero">* Utiliza al menos un Número</p>
+          <p class="errorTextCuenta" id="registroContrasenaErrorSimbolo">* Utiliza al menos un Símbolo</p>
+        </div>
+
+        <div class="wrapper-button">
+          <button class="log-button muted-button" type="button" id="cancelarRegistro">Cancelar</button>
+          <button class="log-button" type="button" id="crearCuentaBoton">Entrar</button>
+
+        </div>
+        <button class="log-button-a blanco-button" type="button" onclick=intercambioElementos()>¿Ya tienes una
+          cuenta?</button>
+
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>
